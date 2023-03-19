@@ -1,0 +1,32 @@
+section {
+    display: flex;
+    padding: 0px;
+}
+
+h2 {
+    background-color: bisque;
+    width: 18rem;
+}
+
+.box {
+    background-color: lightgrey;
+    margin: 2px;
+    padding-inline: 10px;
+    height: 200px;
+}
+
+h1 {
+    text-align: center;
+    color: teal;
+}
+
+.first,.second{
+    height: 200px;
+    background-color: green;
+    margin: 0px;
+}
+
+img{
+    height: 100%;
+    margin: 0px;
+}
