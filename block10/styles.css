@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-inline: 50px;
+}
+
+
+
+.first{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    
+}

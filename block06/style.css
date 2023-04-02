@@ -17,7 +17,7 @@ h2 {
 
 h1 {
     text-align: center;
-    color: teal;
+    color: yellow
 }
 
 .first,.second{
@@ -29,4 +29,8 @@ h1 {
 img{
     height: 100%;
     margin: 0px;
+}
+
+body{
+    background-color: blue;
 }

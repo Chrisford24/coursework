@@ -1,3 +1,5 @@
 {
-    "workbench.tree.indent": 18
+    "workbench.tree.indent": 18,
+    "liveServer.settings.multiRootWorkspaceName": "Coursework",
+    "liveServer.settings.port": 5501
 }
