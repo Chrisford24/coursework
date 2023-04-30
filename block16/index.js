@@ -32,40 +32,51 @@ const rocky = {
 
 */
 
+/*
+    This function has 3 paramters checks if the person has a subscription
+    returns the price for the number of refills
+*/
 function hasSubscription(isSub, refillPrice, numRefills){
     let discount = .25;
     let costBeforeDiscount = refillPrice * numRefills;
-    if(isSub == true){
-        return costBeforeDiscount - (costBeforeDiscount * discount);
-    } else {
-        return costBeforeDiscount;
-    }
+    // if(isSub){
+    //     return costBeforeDiscount - (costBeforeDiscount * discount);
+    // } else {
+    //     return costBeforeDiscount;
+    // }
+    return isSub ? costBeforeDiscount - (costBeforeDiscount * discount) : costBeforeDiscount
+    
 
 }
+
+/*
+    This function has 2 paramters checks if the person has a coupon
+    returns the price for the number of refills
+*/
 
 function hasCoupon(numSubtotal, isCoupon){
     let discount = 10;
-    if(isCoupon == true){
-        return numSubtotal - discount;
-    }else{
-        return numSubtotal;
-    }
-
+    // if(isCoupon){
+    //     return numSubtotal - discount;
+    // }else{
+    //     return numSubtotal;
+    // }
+    return isCoupon ? numSubtotal - discount : numSubtotal
 
 }
 
-function myFunction(person){
-    let subscriptionFunction = hasSubscription(person.subscription, person.pricePerRefill, person.refills);
-    let couponFunction = hasCoupon(subscriptionFunction, person.coupon);
-    console.log(couponFunction);
+/*
+    This function has 1 paramters.
+    returns the grand total price
+*/
+
+function getGrandTotal(person){
+    let costAfterSubsciption = hasSubscription(person.subscription, person.pricePerRefill, person.refills);
+    let costAfterCoupon = hasCoupon(costAfterSubsciption, person.coupon);
+    console.log(`Your grand total is $${costAfterCoupon}.` );
 }
 
 
-
-
-
-
-
-myFunction(timmy);
-myFunction(sarah);
-myFunction(rocky);
+getGrandTotal(timmy);
+getGrandTotal(sarah);
+getGrandTotal(rocky);
